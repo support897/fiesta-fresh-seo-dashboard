@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Fiesta Fresh — Visibility Dashboard</title>
+<meta name="description" content="How the world finds Fiesta Fresh Cleaning: Google rankings and AI visibility.">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧹</text></svg>">
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div id="view-login" class="login-wrap hidden">
+  <div class="login-card">
+    <div class="login-brand">🧹 Fiesta Fresh</div>
+    <h1>Visibility Dashboard</h1>
+    <p class="muted">How the world finds Fiesta Fresh Cleaning.</p>
+
+    <div class="login-block">
+      <h2>Email login</h2>
+      <p class="muted small">For setup. We email you a login link.</p>
+      <div class="row">
+        <input id="login-email" type="email" placeholder="you@example.com" autocomplete="email">
+        <button id="btn-email-login" class="btn primary">Email me a link</button>
+      </div>
+      <p id="email-login-msg" class="msg"></p>
+    </div>
+
+    <div class="divider"><span>or</span></div>
+
+    <div class="login-block">
+      <h2>Phone password</h2>
+      <p class="muted small">The simple password you set inside the app.</p>
+      <div class="row">
+        <input id="login-password" type="password" placeholder="Password" autocomplete="current-password">
+        <button id="btn-password-login" class="btn primary">Unlock</button>
+      </div>
+      <p id="password-login-msg" class="msg"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ APP SHELL ============ -->
+<div id="app" class="hidden">
+  <button id="nav-toggle" aria-label="Menu">☰</button>
+  <aside id="sidebar">
+    <div class="side-brand">🧹 Fiesta Fresh</div>
+    <div class="side-caption">Visibility</div>
+    <nav>
+      <a href="#/home" data-route="home" class="nav-link">🏠 Home</a>
+      <div class="nav-group-label">SEO</div>
+      <a href="#/seo/scoreboard" data-route="seo/scoreboard" class="nav-link">📊 Scoreboard</a>
+      <a href="#/seo/changes" data-route="seo/changes" class="nav-link">🧪 Changes</a>
+      <a href="#/seo/visitors" data-route="seo/visitors" class="nav-link">👀 Visitors</a>
+      <a href="#/seo/leads" data-route="seo/leads" class="nav-link">📞 Leads</a>
+      <a href="#/seo/plan" data-route="seo/plan" class="nav-link">🗓️ Daily Plan</a>
+      <div class="nav-group-label violet">AI Visibility</div>
+      <a href="#/ai/tests" data-route="ai/tests" class="nav-link">🧠 Tests</a>
+      <a href="#/ai/mentions" data-route="ai/mentions" class="nav-link">💬 Mentions</a>
+      <a href="#/ai/changes" data-route="ai/changes" class="nav-link">🧪 Changes</a>
+      <a href="#/ai/plan" data-route="ai/plan" class="nav-link">🗓️ Daily Plan</a>
+    </nav>
+    <div class="side-foot">
+      <a href="#/settings" data-route="settings" class="nav-link">⚙️ Settings</a>
+      <button id="btn-signout" class="btn ghost small">Sign out</button>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section id="page" class="page"></section>
+  </main>
+</div>
+
+<script src="config.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

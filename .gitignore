@@ -1,0 +1,4 @@
+.supabase-service.json
+config.local.js
+*.log
+.DS_Store
